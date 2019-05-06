@@ -36,7 +36,7 @@ import org.apache.hadoop.hive.ql.plan.CreateViewDesc;
 
 /**
  * Implementation of the query block.
- *
+ * TOK_QUERY => 创建QB对象，循环递归子节点
  **/
 
 public class QB {
