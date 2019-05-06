@@ -47,7 +47,7 @@ public class QB {
   private final int numGbys = 0;
   private int numSels = 0;
   private int numSelDi = 0;
-  private HashMap<String, String> aliasToTabs;
+  private HashMap<String, String> aliasToTabs;  //TOK_FROM => 将表名语法部分保存到QB对象的aliasToTabs等属性中
   private HashMap<String, QBExpr> aliasToSubq;  //保存子查询的QB对象
   private HashMap<String, Table> viewAliasToViewSchema;
   private HashMap<String, Map<String, String>> aliasToProps;
