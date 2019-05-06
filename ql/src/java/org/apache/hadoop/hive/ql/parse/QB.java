@@ -48,13 +48,13 @@ public class QB {
   private int numSels = 0;
   private int numSelDi = 0;
   private HashMap<String, String> aliasToTabs;
-  private HashMap<String, QBExpr> aliasToSubq;
+  private HashMap<String, QBExpr> aliasToSubq;  //保存子查询的QB对象
   private HashMap<String, Table> viewAliasToViewSchema;
   private HashMap<String, Map<String, String>> aliasToProps;
   private List<String> aliases;
-  private QBParseInfo qbp;
-  private QBMetaData qbm;
-  private QBJoinTree qbjoin;
+  private QBParseInfo qbp; //QBParseInfo保存一个基本SQL单元中的给个操作部分的AST Tree结构
+  private QBMetaData qbm; //qbm保存每个输入表的元信息，比如表在HDFS上的路径，保存表数据的文件格式等。
+  private QBJoinTree qbjoin;  //QBJoinTree是对Join语法树的结构化。
   private String id;
   private boolean isQuery;
   private boolean isAnalyzeRewrite;
