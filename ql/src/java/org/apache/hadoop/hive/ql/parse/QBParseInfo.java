@@ -50,7 +50,7 @@ public class QBParseInfo {
   /**
    * insclause-0 -> TOK_TAB ASTNode
    */
-  private final HashMap<String, ASTNode> nameToDest;
+  private final HashMap<String, ASTNode> nameToDest; //TOK_DESTINATION => 将输出目标的语法部分保存在QBParseInfo对象的nameToDest属性中
   /**
    * For 'insert into FOO(x,y) select ...' this stores the
    * insclause-0 -> x,y mapping
@@ -58,8 +58,8 @@ public class QBParseInfo {
   private final Map<String, List<String>> nameToDestSchema;
   private final HashMap<String, TableSample> nameToSample;
   private final Map<ASTNode, String> exprToColumnAlias;
-  private final Map<String, ASTNode> destToSelExpr;
-  private final HashMap<String, ASTNode> destToWhereExpr;
+  private final Map<String, ASTNode> destToSelExpr;  //TOK_SELECT => 分别将查询表达式的语法部分保存在destToSelExpr、destToAggregationExprs、destToDistinctFuncExprs三个属性中
+  private final HashMap<String, ASTNode> destToWhereExpr;//TOK_WHERE => 将Where部分的语法保存在QBParseInfo对象的destToWhereExpr属性中
   private final HashMap<String, ASTNode> destToGroupby;
   private final Set<String> destRollups;
   private final Set<String> destCubes;
