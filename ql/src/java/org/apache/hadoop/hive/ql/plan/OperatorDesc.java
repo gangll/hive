@@ -16,6 +16,8 @@
  * limitations under the License.
  */
 
+//Operator将所有运行时需要的参数保存在OperatorDesc中，OperatorDesc在提交任务前序列化到HDFS上，在MapReduce任务执行前从HDFS读取并反序列化。
+
 package org.apache.hadoop.hive.ql.plan;
 
 import java.io.Serializable;
